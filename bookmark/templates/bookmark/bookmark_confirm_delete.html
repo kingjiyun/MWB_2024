@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Bookmark</title>
+</head>
+<body>
+    <h1>Do you want to delete movie "{{ bookmark.movie_name }}"?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="button delete">Delete</button>
+        <a href="{% url 'bookmark_list' %}" class="button">Cancel</a>
+    </form>
+</body>
+</html>

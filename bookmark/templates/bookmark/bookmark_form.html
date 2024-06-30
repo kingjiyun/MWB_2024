@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookmark Form</title>
+</head>
+<body>
+    <h1>{% if form.instance.pk %}Edit{% else %}Add{% endif %} Movie</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <label for="id_movie_name">Movie Name :</label>
+            {{ form.movie_name }}
+        </div>
+        <div>
+            <label for="id_review_text">Movie URL, text :</label>
+            {{ form.review_text }}
+        </div>
+        <div>
+            <label for="id_view_count">Number of Plays :</label>
+            {{ form.view_count }}
+        </div>
+        <button type="submit" class="button">{% if form.instance.pk %}Modify{% else %}Add{% endif %}</button>
+    </form>
+</body>
+</html>

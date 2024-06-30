@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookmarks</title>
+    <style>
+        .button { padding: 5px 10px; }
+        .modify { color: green; }
+        .delete { color: red; }
+    </style>
+</head>
+<body>
+    <h1>저장된 감상문 리스트</h1>
+    <a href="{% url 'bookmark_create' %}" class="button">Add Movie</a>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Movie Name</th>
+                <th>Modify</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for bookmark in bookmarks %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td><a href="{% url 'bookmark_edit' bookmark.id %}">{{ bookmark.movie_name }}</a></td>
+                    <td><a href="{% url 'bookmark_edit' bookmark.id %}" class="button modify">Modify</a></td>
+                    <td><a href="{% url 'bookmark_delete' bookmark.id %}" class="button delete">Delete</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
