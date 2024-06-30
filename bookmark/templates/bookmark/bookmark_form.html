@@ -5,6 +5,7 @@
     <title>Bookmark Form</title>
 </head>
 <body>
+<p>감상한 영화의 링크를 복사해서 적어주세요!</p>
     <h1>{% if form.instance.pk %}Edit{% else %}Add{% endif %} Movie</h1>
     <form method="post">
         {% csrf_token %}
