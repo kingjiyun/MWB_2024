@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookmark Detail</title>
+</head>
+<body>
+    <h1>{{ bookmark.movie_name }}</h1>
+    <p>적은 영화 링크를 복사하여 검색하세요!</p>
+    <p>영화 링크, 감상문: {{ bookmark.review_text }}</p>
+    <p>재생 횟수: {{ bookmark.view_count }}</p>
+    <a href="{% url 'bookmark_edit' bookmark.id %}" class="button">Modify</a>
+    <a href="{% url 'bookmark_list' %}" class="button">Back to List</a>
+</body>
+</html>

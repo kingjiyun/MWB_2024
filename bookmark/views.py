@@ -33,3 +33,7 @@ def bookmark_delete(request, id):
         bookmark.delete()
         return redirect('bookmark_list')
     return render(request, 'bookmark/bookmark_confirm_delete.html', {'bookmark': bookmark})
+
+def bookmark_detail(request, id):
+    bookmark = get_object_or_404(Bookmark, id=id)
+    return render(request, 'bookmark/bookmark_detail.html', {'bookmark': bookmark})
