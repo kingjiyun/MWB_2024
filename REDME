@@ -1,0 +1,14 @@
+장고 동아리 프로젝트 역사영화 감상동아리
+
+terminal
+1. python -m pip install django~=4.2
+2. django-admin startproject MWB_2024 .
+
+settings django 활성
+run -> runserver
+
+github에서 리포지토리 생성(MWB_2024)
+
+git base에서 git remote add origin https://github.com/kingjiyun/MWB_2024
+
+
