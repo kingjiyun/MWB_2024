@@ -11,4 +11,11 @@ github에서 리포지토리 생성(MWB_2024)
 
 git base에서 git remote add origin https://github.com/kingjiyun/MWB_2024
 
+bookmark start app
+bookmark>templates>bookmark>
+bookmark_confirm_delete,
+bookmark_detail,
+bookmark_form,
+bookmark_list
+생성
 
